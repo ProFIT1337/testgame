@@ -22,6 +22,7 @@ function finishGame() {
   if (rez < bestRez) {
     bestRez = rez;
     document.querySelector('.res__best__value').innerText = rez + 'ms';
+    fetch('http://134.0.119.213:5000/highscore/' + rez + 'ms', { mode: 'no-cors' });
   }
   activeButton.classList.remove('active');
   activeButton = undefined;
