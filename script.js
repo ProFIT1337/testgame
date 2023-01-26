@@ -17,15 +17,17 @@ function activateButton(button) {
 
 function finishGame() {
   let rez = new Date() - startTime;
+  document.querySelector('.res__value').innerText = rez + 'ms';
+
   if (rez < bestRez) {
     bestRez = rez;
-    document.querySelector('.res__value').innerText = rez + 'ms';
+    document.querySelector('.res__best__value').innerText = rez + 'ms';
   }
   activeButton.classList.remove('active');
   activeButton = undefined;
   setTimeout(() => {
-    activateButton(buttons[getRandomInt(1)]);
-  }, getRandomInt(10000));
+    activateButton(buttons[getRandomInt(2)]);
+  }, getRandomInt(3000));
 }
 
 function clickHandler(e) {

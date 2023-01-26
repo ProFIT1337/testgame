@@ -3,7 +3,7 @@
 }
 button {
   width: 50%;
-  height: 95vh;
+  height: 80vh;
 }
 button.active {
   background-color: red;
