@@ -1,0 +1,10 @@
+.buttons {
+  display: flex;
+}
+button {
+  width: 50%;
+  height: 95vh;
+}
+button.active {
+  background-color: red;
+}
